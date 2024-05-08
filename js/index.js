@@ -1,3 +1,4 @@
+//tips: length is one longer than array(array starts at 0 and length at 1)
 // // exercise1) create two variables, firstCard and secondCard, and set their values to a random number between 2-11
 // let firstCard = 5
 // let secondCard = 6
@@ -51,6 +52,7 @@
 
 let firstCard = 5
 let secondCard = 6
+let cards =[firstCard, secondCard] // array - ordered list items
 let sum = firstCard + secondCard
 let hasBlackjack= false
 let isAlive = true
@@ -64,8 +66,7 @@ let sumEl = document.querySelector("#sum-el")
 let cardsEl = document.querySelector("#cards-el")
 //reassign the message variable to the string we are logging out
 //exercise11) create a startGame() function. move the conditional inside the body of the function
-console.log(messageEl)
-function startGame(){
+function renderGame(){
     //exercise15) render the sum on the page using this format -> "sum: 14"
     //exercise18) render the cards on the page using this format-> "cards: "
     if (sum<=20){
@@ -83,14 +84,20 @@ function startGame(){
     }
     messageEl.textContent = message
     sumEl.textContent = "sum: "+sum
-    cardsEl.textContent= "cards: "+firstCard+" and "+secondCard
+    cardsEl.textContent= "cards: "+cards[0]+" and "+cards[1]
 }
-
+//exercise22) create a function startGame that render the renderGame function
+function startGame() {
+    renderGame()
+}
 //exercise20) create a function newCard() that logs out "drawing a new card"
 function newCard(){
-    console.log("drawing a new card")
+    //exercise21) create a card variable
+    let card = 10
+    sum += card
+    renderGame()
 }
-newCard()
+    
 
 
 
@@ -102,3 +109,13 @@ newCard()
 // console.log(3>=3)// true
 // console.log(11<=11)// true
 // console.log(3<=2)// false
+
+// exercise24) create an array that lists your, experience, education, licenses, skills or similar
+let list = ["web developer course and a lot of youtube videos?", "primary, secondary, davinci, coderhouse, liceo britanico","davinci, coderhouse, firstexam", "english, html, css, sass, bootstrap, media queries, js, git, github"]
+//exercise25) make the following path appear in the console
+//education
+//licenses
+//experience
+console.log(list=[1])
+console.log(list=[2])
+console.log(list=[0])
