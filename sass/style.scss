@@ -1,0 +1,40 @@
+//exercise9) complete the css styling according to the provided design
+$goldenColor: goldenrod;
+$tableColor: #016f32;
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: $tableColor;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+}
+
+h1 {
+    color: $goldenColor;
+}
+
+#message-el {
+    font-style: italic;
+}
+
+//exercise12) style the button according to the provided design
+// text color - #016f32
+// width - 150px
+// background - goldenrod
+
+button {
+    background-color: $goldenColor;
+    width: 150px;
+    color: $tableColor;
+    border: none;
+    border-radius: 2px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-weight: bold;
+    margin: 2px;
+}
