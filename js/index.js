@@ -39,7 +39,7 @@
 //     console.log("Here is your birthday card from the king")
 // }
 // else{
-//     console.log("Not eligible, U've already gotten one")
+//     console.log("Not eligible, you've already gotten one")
 // }
 
 //exercise5) write the conditional according to these rules:
@@ -50,25 +50,17 @@
 //exercise6) create a variable isAlive and assign it to true
 // then flip its value to false
 
-let firstCard = 5
-let secondCard = 6
-let cards =[firstCard, secondCard] // array - ordered list items
+let firstCard = 10
+let secondCard = 4
+let cards =[firstCard, secondCard]
 let sum = firstCard + secondCard
 let hasBlackjack= false
 let isAlive = true
-//exercise8) declare a variable called message and assign its value to an empty string
 let message = ""
-//exercise12) store the message-el paragraph in a variable called messageEL
 let messageEl = document.querySelector("#message-el")
-//exercise14) store the sum paragraph in a variable called sumEl
 let sumEl = document.querySelector("#sum-el")
-//exercise17) store the cards paragraph in a variable called cardsEl
 let cardsEl = document.querySelector("#cards-el")
-//reassign the message variable to the string we are logging out
-//exercise11) create a startGame() function. move the conditional inside the body of the function
 function renderGame(){
-    //exercise15) render the sum on the page using this format -> "sum: 14"
-    //exercise18) render the cards on the page using this format-> "cards: "
     if (sum<=20){
         message="do u want a new card?"
     }
@@ -82,19 +74,19 @@ function renderGame(){
         message="u r out rookie!"
         isAlive = false
     }
+    for (let i=0; i=cards.length; i++) {
+        cardsEl.textContent += cards[i]+" "
+    }
     messageEl.textContent = message
     sumEl.textContent = "sum: "+sum
-    cardsEl.textContent= "cards: "+cards[0]+" and "+cards[1]
 }
-//exercise22) create a function startGame that render the renderGame function
 function startGame() {
     renderGame()
 }
-//exercise20) create a function newCard() that logs out "drawing a new card"
 function newCard(){
-    //exercise21) create a card variable
-    let card = 10
+    let card = 6
     sum += card
+    cards.push(card)
     renderGame()
 }
     
@@ -110,12 +102,56 @@ function newCard(){
 // console.log(11<=11)// true
 // console.log(3<=2)// false
 
-// exercise24) create an array that lists your, experience, education, licenses, skills or similar
-let list = ["web developer course and a lot of youtube videos?", "primary, secondary, davinci, coderhouse, liceo britanico","davinci, coderhouse, firstexam", "english, html, css, sass, bootstrap, media queries, js, git, github"]
-//exercise25) make the following path appear in the console
-//education
-//licenses
-//experience
-console.log(list=[1])
-console.log(list=[2])
-console.log(list=[0])
+// // exercise24) create an array that lists your, experience, education, licenses, skills or similar
+// let list = ["web developer course and a lot of youtube videos?", "primary, secondary, davinci, coderhouse, liceo britanico","davinci, coderhouse, firstexam", "english, html, css, sass, bootstrap, media queries, js, git, github"]
+// //exercise25) make the following path appear in the console
+// //education
+// //licenses
+// //experience
+// console.log(list=[1])
+// console.log(list=[2])
+// console.log(list=[0])
+
+// //exercise26)
+// //create an array that describes yourself. use the three primitive data types you have learned
+// // it should contain your name(string), your age(number), and whether you like pizza(boolean)
+
+// let yourSelf=["thiago", 18, true]
+
+// //exercise27)
+// let cardzzz = [7, 4]
+// cardzzz.push(6)
+// //push the newMessage to the messages array, and then log out the array
+// let messages=[
+//     "hey, how is it going?",
+//     "I am great, thank you! how about you?",
+//     "all good. been working on my portfolio lately."
+// ]
+
+// let newMessage= "same here!"
+
+// messages.push(newMessage)
+// console.log(messages)
+// // exercise28) remove the push(hint: u have to google it)
+// messages.pop()
+// console.log(messages)
+
+
+//       start         finish    step size
+// for ( let count = 10; count<20; count =+1) {
+//     console.log(count)
+// }
+//exercise31) 
+
+//create a for loop that counts from 10 to 100 in steps of 10
+// for (let i=10; i<=100; i=+10) {
+//     console.log(i)
+// }
+
+//exercise32) create a for loop that logs out all the cars in the array
+// use cards.length to specify how  long the loop should run
+// let cardszsz = [7, 3, 9]
+// for (let counterStrike = 0; counterStrike < cardszsz.length; counterStrike++){
+//     console.log(cardszsz[counterStrike])
+// }
+
