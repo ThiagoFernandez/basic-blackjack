@@ -15,14 +15,17 @@ playerEl.textContent = player.playerName + ": $" + player.credits;
 
 function getRandomCard() {
     let randomCard = Math.floor(Math.random() * 13) + 1;
-    if (randomCard === 1) {
+    if (randomCard === 1 && sum + 11 <= 21) {
         return 11;
+    } else if (randomCard === 1 && sum + 11 > 21) {
+        return 1;
     } else if (randomCard > 10) {
         return 10;
     } else {
         return randomCard;
     }
 }
+
 
 function startGame() {
     isAlive = true;
