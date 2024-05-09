@@ -137,3 +137,12 @@ function newCard() {
 //     tags:["html","css"]
 // }
 // console.log(course.isFree)
+
+// let object = {
+//     price: 150,
+//     place: "castelvania",
+//     roomService: true,
+//     hashtags: ["gym", "english", "touristic", "countryside"]
+// };
+
+// console.log(object.hashtags[1], object.hashtags[2], object.roomService);
